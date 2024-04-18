@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho</title>
+</head>
+<body>
+<h1>Meu Carrinho</h1>
+
+<!-- Botão para mostrar os produtos do carrinho -->
+<form id="formProdutosCarrinho" action="/verCarrinho" method="get" target="iframeProdutosCarrinho">
+    <button type="submit">Mostrar Produtos do Carrinho</button>
+</form>
+
+<!-- Botão para listar todos os produtos -->
+<form id="formTodosProdutos" action="/todosprodutoscliente" method="get" target="iframeTodosProdutos">
+    <button type="submit">Listar Todos os Produtos</button>
+</form>
+
+<!-- Use um iframe para exibir a tabela de produtos do carrinho sem redirecionar a página -->
+<iframe name="iframeProdutosCarrinho" id="iframeProdutosCarrinho" width="100%" height="300" frameborder="0"></iframe>
+
+<!-- Use um iframe para exibir a tabela de todos os produtos sem redirecionar a página -->
+<iframe name="iframeTodosProdutos" id="iframeTodosProdutos" width="100%" height="300" frameborder="0"></iframe>
+
+<br>
+<br>
+
+<form action="logout" method="GET">
+    <button type="submit">Sair</button>
+</form>
+</body>
+</html>

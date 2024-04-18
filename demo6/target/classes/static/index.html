@@ -1,0 +1,32 @@
+<html lang="pt">
+<head>
+    <title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<script>
+    function verificarCampos(){
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+        if(email === "" || senha === ""){
+            alert("Preencha os campos corretamente")
+            return false
+        }
+        return true
+    }
+</script>
+<form action="/logar" method="post" onsubmit="return verificarCampos()">
+
+    <label for="email">Email:</label><br>
+
+    <input type="text" id="email" name="email"><br>
+
+    <label for="senha">Senha: </label><br>
+
+    <input type="password" id="senha" name="senha"><br>
+
+    <button type="submit">Entrar</button>
+</form>
+</body>
+</html>
